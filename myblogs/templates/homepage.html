@@ -37,76 +37,21 @@
    <br>
    <br>
    <br>
+   {% for ob in obj %}
 <section>
-  <div class="card-columns">
+  <div class="card" style="width: 20rem;">
     <div class="card">
-      <img class="card-img-top" src={% static "{{obj.image}}" %} alt="Card image cap">
+      <img class="card-img-top" src={{ob.image}} alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{obj}}</h5>
-        <p class="card-text">{obj.blog}</p>
+        <h5 class="card-title">{{ob.blog_title}}</h5><br>
+        <p class="card-text">{{ob.blog}}</p>
+        <hr>
+        <p class="card-text">{{ob.tags}}</p>
+        <p class="card-text">{{ob.date}}</p>
       </div>
     </div>
-    <div class="card p-3">
-      <blockquote class="blockquote mb-0 card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer class="blockquote-footer">
-          <small class="text-muted">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src={% static "house.jpg" %} alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <br>
-    <div class="card bg-white text-dark text-center p-3">
-      <blockquote class="blockquote mb-0">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-        <footer class="blockquote-footer">
-          <small>
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </small>
-        </footer>
-      </blockquote>
-    </div>
-    <br>
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="quote">
-    <div class="card">
-      <img class="card-img" src={% static "quote.png" %} alt="Card image">
-    </div></div>
-    <br>
-   
-    <br>
-    <div class="card-rows">
-      <div class="card">
-        <img class="card-img-top" src={% static "house.jpg" %} alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title that wraps to a new line</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-      <div class="card-rows">
-        <div class="card">
-          <img class="card-img-top" src={% static "house.jpg" %} alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title that wraps to a new line</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-    
+</div>
+        {% endfor %}
   </section>
   
     
