@@ -38,19 +38,19 @@
    <br>
    <br>
    {% for ob in obj %}
-<section>
-  <div class="card" style="width: 20rem;">
-    <div class="card">
+<section >
+  <div class="card" style="width: 20rem; " >
+    <div class="card" style="height: 30rem;">
       <img class="card-img-top" src={{ob.image}} alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{ob.blog_title}}</h5><br>
-        <p class="card-text">{{ob.blog}}</p>
+        <h2><a class="article-title" href='#'>{{ ob.blog_title }}</a></h2>
         <hr>
         <p class="card-text">{{ob.tags}}</p>
         <p class="card-text">{{ob.date}}</p>
       </div>
     </div>
 </div>
+<br><br><br>
         {% endfor %}
   </section>
   
